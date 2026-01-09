@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Romaneio Cia do Corte</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Romaneio Cia do Corte</h1>
+</header>
+
+<main>
+  <section class="box">
+    <label>Cliente</label>
+    <input id="cliente" placeholder="Nome do cliente">
+
+    <label>Modelo</label>
+    <input id="modelo" placeholder="Ex: Camiseta Básica">
+
+    <label>Preço por peça (R$)</label>
+    <input id="preco" type="number" step="0.01">
+
+    <label>Quantidade total</label>
+    <input id="quantidade" type="number">
+
+    <button onclick="adicionar()">Adicionar modelo</button>
+  </section>
+
+  <section class="box">
+    <h2>Modelos</h2>
+    <ul id="lista"></ul>
+    <h3 id="total">Total: R$ 0,00</h3>
+    <button onclick="gerarPDF()">Gerar PDF</button>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
