@@ -75,3 +75,14 @@ li {
 h2, h3 {
   margin-top: 10px;
 }
+.grade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.grade input {
+  text-align: center;
+  padding: 6px;
+}
