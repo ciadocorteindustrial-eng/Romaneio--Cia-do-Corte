@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Romaneio Cia do Corte</title>
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="manifest" href="manifest.json?v=3">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
-<body>
 
+<body>
 <header>
   <h1>Romaneio Cia do Corte</h1>
 </header>
@@ -18,37 +17,25 @@
 <main>
   <section class="box">
     <label>Cliente</label>
-    <input id="cliente" placeholder="Nome do cliente">
+    <input id="cliente" placeholder="Nome do cliente" autocomplete="off">
 
     <label>Modelo</label>
-    <input id="modelo" placeholder="Ex: Camiseta Básica">
+    <input id="modelo" placeholder="Ex: Camiseta Básica" autocomplete="off">
 
     <label>Preço por peça (R$)</label>
-    <input id="preco" type="number" step="0.01">
+    <input id="preco" type="number" step="0.01" inputmode="decimal" placeholder="Ex: 29,90">
 
-    
     <label>Cor</label>
-<input id="cor" placeholder="Ex: Preta">
+    <input id="cor" placeholder="Ex: Preta" autocomplete="off">
 
-<label>Tamanhos (preencha só o que usar)</label>
+    <label>Tamanhos (preencha só o que usar)</label>
+    <div class="grade">
+      <input type="number" placeholder="P" id="tP" inputmode="numeric" min="0">
+      <input type="number" placeholder="M" id="tM" inputmode="numeric" min="0">
+      <input type="number" placeholder="G" id="tG" inputmode="numeric" min="0">
+      <input type="number" placeholder="GG" id="tGG" inputmode="numeric" min="0">
 
-<div class="grade">
-  <input type="number" placeholder="P" id="tP">
-  <input type="number" placeholder="M" id="tM">
-  <input type="number" placeholder="G" id="tG">
-  <input type="number" placeholder="GG" id="tGG">
-  <input type="number" placeholder="XGG" id="tXGG">
-
-  <input type="number" placeholder="34" id="t34">
-  <input type="number" placeholder="36" id="t36">
-  <input type="number" placeholder="38" id="t38">
-  <input type="number" placeholder="40" id="t40">
-  <input type="number" placeholder="42" id="t42">
-  <input type="number" placeholder="44" id="t44">
-  <input type="number" placeholder="46" id="t46">
-  <input type="number" placeholder="48" id="t48">
-  <input type="number" placeholder="50" id="t50">
-  <input type="number" placeholder="52" id="t52">
-  <input type="number" placeholder="54" id="t54">
-  <input type="number" placeholder="56" id="t56">
-</div>
+      <input type="number" placeholder="XGG" id="tXGG" inputmode="numeric" min="0">
+      <input type="number" placeholder="34" id="t34" inputmode="numeric" min="0">
+      <input type="number" placeholder="36" id="t36" inputmode="numeric" min="0">
+      <input type
