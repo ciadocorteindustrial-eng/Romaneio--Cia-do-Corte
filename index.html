@@ -1,20 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Romaneio Cia do Corte</title>
+
+  <link rel="manifest" href="manifest.json?v=1000">
+  <link rel="stylesheet" href="style.css?v=1000">
 </head>
-<body style="font-family:Arial;padding:20px">
 
-<h1>Romaneio Cia do Corte</h1>
+<body>
+<header>
+  <h1>Romaneio Cia do Corte</h1>
+</header>
 
-<p style="color:red;font-weight:bold">
-SE VOCÊ ESTÁ LENDO ISSO, O HTML NOVO FOI PUBLICADO
-</p>
+<main>
+  <section class="box">
+    <label>Cliente</label>
+    <input id="cliente" placeholder="Nome do cliente" autocomplete="off">
 
-<button onclick="alert('JS carregou')">Testar JS</button>
+    <label>Modelo</label>
+    <input id="modelo" placeholder="Ex: Camiseta Básica" autocomplete="off">
 
-<script src="app.js?v=999"></script>
+    <label>Preço por peça (R$)</label>
+    <input id="preco" type="number" step="0.01" inputmode="decimal" placeholder="Ex: 29,90">
+
+    <label>Cor</label>
+    <input id="cor" placeholder="Ex: Preta" autocomplete="off">
+
+    <label>Tamanhos (preencha só o que usar)</label>
+    <div class="grade">
+      <input type="number" placeholder="P" id="tP" inputmode="numeric" min="0">
+      <input type="number" placeholder="M" id="tM" inputmode="numeric" min="0">
+      <input type="number" placeholder="G" id="tG" inputmode="numeric" min="0">
+      <input type="number" placeholder="GG" id="tGG" inputmode="numeric" min="0">
+
+      <input type="number" placeholder="XGG" id="tXGG" inputmode="numeric" min="0">
+      <input type="number" placeholder="34" id="t34" inputmode="numeric" min="0">
+      <input type="number" placeholder="36" id="t36" inputmode="numeric" min="0">
+      <input type="number" placeholder="38" id="t38" inputmode="numeric" min="0">
+
+      <input type="number" placeholder="40" id="t40" inputmode="numeric" min="0">
+      <input type="number" placeholder="42" id="t42" inputmode="numeric" min="0">
+      <input type="number" placeholder="44" id="t44" inputmode="numeric" min="0">
+      <input type="number" placeholder="46" id="t46" inputmode="numeric" min="0">
+
+      <input type="number" placeholder="48" id="t48" inputmode="numeric" min="0">
+      <input type="number" placeholder="50" id="t50" inputmode="numeric" min="0">
+      <input type="number" placeholder="52" id="t52" inputmode="numeric" min="0">
+      <input type="number" placeholder="54" id="t54" inputmode="numeric" min="0">
+
+      <input type="number" placeholder="56" id="t56" inputmode="numeric" min="0">
+    </div>
+
+    <button type="button" onclick="adicionar()">Adicionar modelo</button>
+    <p class="hint">Dica: adicione o mesmo modelo várias vezes com cores diferentes.</p>
+  </section>
+
+  <section class="box">
+    <div class="row">
+      <h2>Modelos</h2>
+      <button class="btn-secondary" type="button" onclick="limparTudo()">Limpar</button>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <div class="totalbox">
+      <div id="totalPecas" class="muted">Total de peças: 0</div>
+      <h3 id="total">Total: R$ 0,00</h3>
+    </div>
+
+    <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+    <button class="btn-secondary" type="button" onclick="enviarWhatsApp()">Enviar WhatsApp</button>
+
+    <p class="hint">
+      “Enviar WhatsApp” abre a conversa com o texto. Gere o PDF e compartilhe pelo botão de compartilhar do celular.
+    </p>
+  </section>
+</main>
+
+<script src="app.js?v=1000"></script>
 </body>
 </html>
