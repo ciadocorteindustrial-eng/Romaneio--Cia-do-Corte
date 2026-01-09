@@ -2,11 +2,3 @@ index.html
 style.css
 app.js
 manifest.json
-{
-  "name": "Romaneio Cia do Corte",
-  "short_name": "Romaneio",
-  "start_url": "./?pwa=1",
-  "display": "standalone",
-  "background_color": "#f2f2f2",
-  "theme_color": "#666666"
-}
